@@ -10,6 +10,9 @@
 module.exports = {
   plugins: [
     'gatsby-transformer-remark',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-remark',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -21,6 +24,7 @@ module.exports = {
   siteMetadata: {
     title:'Xai Hang',
     description: 'Web Dev Portfolio',
-    copyright: 'This website is copy right 2023 XH.Inc'
+    copyright: 'This website is copy right 2023 XH.Inc',
+    contact: 'xaihang12@gmail.com'
   }
 }
