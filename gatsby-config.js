@@ -8,5 +8,19 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
-  plugins: [],
+  plugins: [
+    'gatsby-transformer-remark',
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `projects`,
+        path: `${__dirname}/src/projects/`,
+      },
+    },
+  ],
+  siteMetadata: {
+    title:'Xai Hang',
+    description: 'Web Dev Portfolio',
+    copyright: 'This website is copy right 2023 XH.Inc'
+  }
 }

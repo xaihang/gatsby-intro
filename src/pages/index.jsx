@@ -4,13 +4,14 @@ import Layout from "../components/Layout";
 import "../styles/home.css";
 
 export default function Home() {
+
   return (
     <Layout>
       <section className="header">
         <div>
           <h2>Design</h2>
           <h3>Develop & Deploy</h3>
-          <p>Full Stack Software Developer from Minneapolis, MN</p>
+          <p>Full Stack Software Developer based in Minneapolis, MN</p>
           <Link className="btn" to="/projects">
             My Portfolio Projects
           </Link>
@@ -20,6 +21,7 @@ export default function Home() {
           alt="profile"
           style={{ maxWidth: "300px", borderRadius: "50%" }}
         />
+  
       </section>
     </Layout>
   );
