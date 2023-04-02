@@ -1,5 +1,16 @@
-import * as React from "react"
+import * as React from "react";
+import Layout from "../components/Layout";
 
 export default function Home() {
-  return <div>Hello world!</div>
+  return (
+    <Layout>
+      <section>
+        <div>
+          <h2>Design</h2>
+          <h3>Develop & Deploy</h3>
+          <p>Full Stack Software Developer from Minneapolis, MN</p>
+        </div>
+      </section>
+    </Layout>
+  );
 }

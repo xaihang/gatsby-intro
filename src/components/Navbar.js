@@ -6,10 +6,11 @@ export default function Navbar() {
     <nav>
       <h1>Xai Hang</h1>
       <div className="links">
-        <Link to="/">About</Link>
-        <Link to="/">Projects</Link>
-        <Link to="/">Contact</Link>
-        <Link to="/">Resume</Link>
+        <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
+        <Link to="/projects">Projects</Link>
+        <Link to="/contact">Contact</Link>
+        <Link to="/resume">Resume</Link>
       </div>
     </nav>
   );
