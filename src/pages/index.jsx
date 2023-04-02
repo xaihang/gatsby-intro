@@ -1,9 +1,11 @@
 import React from "react";
-import { Link } from "gatsby";
+import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import "../styles/home.css";
+import Img from "gatsby-image";
 
-export default function Home() {
+export default function Home({ data }) {
+  console.log(data);
 
   return (
     <Layout>
@@ -16,13 +18,25 @@ export default function Home() {
             My Portfolio Projects
           </Link>
         </div>
-        <img
-          src="/profile.jpeg"
+        <Img
+          className="profile-img"
+          fluid={data.file.childImageSharp.fluid}
           alt="profile"
-          style={{ maxWidth: "300px", borderRadius: "50%" }}
+          style={{ maxWidth: "300px" }}
         />
-  
       </section>
     </Layout>
   );
 }
+
+export const query = graphql`
+  query Profile {
+    file(relativePath: { eq: "profile.jpeg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`;
