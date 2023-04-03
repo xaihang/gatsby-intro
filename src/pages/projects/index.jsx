@@ -5,7 +5,7 @@ import '../../styles/projects.css';
 import Img from "gatsby-image";
 
 export default function Projects({data}) {
-  console.log('data', data)
+  // console.log('data', data)
   const projects = data.allMarkdownRemark.nodes
   
   return (
@@ -15,7 +15,7 @@ export default function Projects({data}) {
         <h3>Projects & Websites I've Created</h3>
         <div className="projects">
           {projects.map(project => (
-            <Link to={"/projects" + project.frontmatter.slug} key={project.id}>
+            <Link to={"/projects/" + project.frontmatter.slug} key={project.id}>
               <div>
               <Img fluid={project.frontmatter.thumb.childImageSharp.fluid} />
                 <h3>{project.frontmatter.title}</h3>

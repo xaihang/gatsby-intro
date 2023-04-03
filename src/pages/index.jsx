@@ -5,7 +5,7 @@ import "../styles/home.css";
 import Img from "gatsby-image";
 
 export default function Home({ data }) {
-  console.log(data);
+  // console.log(data);
 
   return (
     <Layout>
